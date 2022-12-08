@@ -13,7 +13,7 @@
 
 
 
-Console.WriteLine("Введите размеры массива");
+Console.WriteLine("Введите размеры массива: ");
 int m = Convert.ToInt32(Console.ReadLine());
 int n = Convert.ToInt32(Console.ReadLine());
 int[,] array = new int[m, n];
@@ -37,7 +37,7 @@ Console.WriteLine("Введите координаты");
 int a = Convert.ToInt32(Console.ReadLine());
 int b = Convert.ToInt32(Console.ReadLine());
     if (a>m-1 && b>n-1)
-    Console.WriteLine("Tакого числа нет");
+    Console.WriteLine("Tакого числа нет. Введенные координаты вне границ массива. Повторите ввод параметров.");
     else
     {
         object c = array.GetValue(a,b);
