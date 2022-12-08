@@ -21,7 +21,7 @@ int[,] array = new int[m, n];
 for (int i = 0; i < array.GetLength(0); i++) 
 {
     for (int j = 0; j < array.GetLength(1); j++)
-        array [i, j] = Convert.ToInt32(new Random().Next(0,30));  
+        array [i, j] = Convert.ToInt32(new Random().Next(0,10));  
 }
 
 Console.WriteLine();
@@ -33,10 +33,14 @@ for (int i = 0; i < array.GetLength(0); i++)
         Console.WriteLine();
 }
 
-Console.WriteLine("Введите координаты");
+Console.WriteLine("Введите координаты искомого числа: ");
 int a = Convert.ToInt32(Console.ReadLine());
 int b = Convert.ToInt32(Console.ReadLine());
-    if (a>m-1 && b>n-1)
+    if (a>(m) && b>(n))
+    Console.WriteLine("Tакого числа нет. Введенные координаты вне границ массива. Повторите ввод параметров.");
+    else if (a>(m))
+    Console.WriteLine("Tакого числа нет. Введенные координаты вне границ массива. Повторите ввод параметров.");
+    else if (b>(n))
     Console.WriteLine("Tакого числа нет. Введенные координаты вне границ массива. Повторите ввод параметров.");
     else
     {
